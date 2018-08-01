@@ -60,9 +60,14 @@ export default {
     }
   },
   created() {
-    this.$http.post("http://localhost:3000/user/login", { a: 1 }).then(res => {
-      console.log(res);
-    });
+    console.log(this.$router);
+    
+    this.$router.push('Dashboard')
+    this.$http
+      .post("http://localhost:3000/user/login", { username: 1, password: 1 })
+      .then(res => {
+        console.log(res);
+      });
   }
 };
 </script>
