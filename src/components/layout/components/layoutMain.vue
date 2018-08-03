@@ -1,14 +1,10 @@
 <template>
-  <div class=''>
-    <!-- <layoutPage></layoutPage> -->
-
-    editor才能看
+  <div>
+    布局main
   </div>
 </template>
 
 <script>
-import { layoutPage } from "@/components/layout";
-
 export default {
   data() {
     return {};
@@ -20,7 +16,7 @@ export default {
   mounted() {
     this.getInfo();
   },
-  components: { layoutPage }
+  components: {}
 };
 </script>
 

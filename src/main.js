@@ -7,6 +7,7 @@ import obj from "./router/router.js";
 import Cookies from 'js-cookie'
 import store from "./store/index.js";
 import "./utils/permission.js";
+
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 Vue.prototype.$cookie = Cookies
@@ -17,3 +18,7 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+
+
+

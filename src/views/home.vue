@@ -10,9 +10,9 @@
                 <el-menu background-color="#545c64"
                          text-color="#fff"
                          active-text-color="#ffd04b">
-                    <el-menu-item @click="$router.push('/home/admin')"
+                    <el-menu-item @click="$router.push('/admin')"
                                   index='1'>admin权限页</el-menu-item>
-                    <el-menu-item @click="$router.push('/home/editor')"
+                    <el-menu-item @click="$router.push('/editor')"
                                   index='2'>editor权限页</el-menu-item>
                 </el-menu>
             </el-aside>

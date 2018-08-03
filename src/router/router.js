@@ -1,13 +1,15 @@
 import Vue from "vue";
 import Router from "vue-router";
-import home from "../views/home.vue";
 import login from "../views/login.vue";
 import admin from "../views/admin.vue";
 import editor from "../views/editor.vue";
+import test from "../views/test.vue";
+
+import home from "./home.js";
 
 Vue.use(Router)
 
-const constantRouterMap = [
+let constantRouterMap = [
     {
         path: '/',
         redirect: '/login'
@@ -16,43 +18,34 @@ const constantRouterMap = [
         path: '/login',
         component: login,
         name: 'login'
+    },
 
-    },
     {
-        path: '/home',
-        component: home,
-        name: 'home',
-        children: [
-            {
-                path: 'admin',
-                component: admin,
-                name: 'admin',
-                meta: { role: ['admin'] }, //页面需要的权限
-            },
-            {
-                path: 'editor',
-                component: editor,
-                name: 'editor',
-                meta: { role: ['editor'] }, //页面需要的权限
-            },
-            { path: '*', redirect: '/404', hidden: true }
-        ]
-    },
+        path: '/test',
+        component: test,
+        name: 'test'
+    }
 ]
+
 const asyncRouterMap = [
     {
-        path: 'admin',
+        path: '/admin',
         component: admin,
         name: 'admin',
         meta: { role: ['admin'] }, //页面需要的权限
     },
     {
-        path: 'editor',
+        path: '/editor',
         component: editor,
         name: 'editor',
         meta: { role: ['editor'] }, //页面需要的权限
     }
 ]
+
+constantRouterMap.push(...home)
+
+console.log(constantRouterMap, 'constantRouterMap');
+
 
 const routerInstance = new Router({
     routes: constantRouterMap

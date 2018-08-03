@@ -1,14 +1,10 @@
 <template>
-  <div class=''>
-    <!-- <layoutPage></layoutPage> -->
-
-    editor才能看
-  </div>
+    <div class=''>
+        admin1
+    </div>
 </template>
 
 <script>
-import { layoutPage } from "@/components/layout";
-
 export default {
   data() {
     return {};
@@ -18,9 +14,10 @@ export default {
   },
   computed: {},
   mounted() {
+      alert(1)
     this.getInfo();
   },
-  components: { layoutPage }
+  components: {}
 };
 </script>
 
